@@ -14,11 +14,12 @@ function App() {
   return (
     <div className="App">
       {nayoks.map((nk) => (
-        <Nayok name={nk.name} key={nk.id} age={nk.age}></Nayok>
+        <Nayok name={nk.name} key={nk.id} email={nk.email}></Nayok>
       ))}
     </div>
   );
 }
+
 function Nayok(props) {
   const nayokStyles = {
     border: "2px solid purple",
@@ -28,7 +29,7 @@ function Nayok(props) {
   return (
     <div style={nayokStyles}>
       <h2> I am Nayok:{props.name} </h2>
-      <h3>I have done 20 movies in {props.age || 30} years</h3>
+      <h3>I have done 20 movies in {props.email} years</h3>
     </div>
   );
 }
